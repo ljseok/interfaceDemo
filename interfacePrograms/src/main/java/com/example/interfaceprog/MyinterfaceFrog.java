@@ -15,28 +15,29 @@ public class MyinterfaceFrog {
         System.out.println("Average area: " + average(countries));
     }
 
-    private static double average(Country[] objects) {
+    private static double average(Measurable[] objects) {
         if (objects.length == 0) {
             return 0;
         }
         double sum = 0;
-        for (Country obj : objects) {
-            sum = sum + obj.getArea();
+        for (Measurable obj : objects) {
+            sum = sum + obj.getMeasure();
+            sum = sum + obj.getMeasure();
         }
         return sum / objects.length;
     }
-
+/*
     private static double average(BankAccount[] objects) {
         if (objects.length == 0) {
             return 0;
         }
         double sum = 0;
         for (BankAccount obj : objects) {
-            sum = sum + obj.getBalance();
+            sum = sum + obj.getMeasure();
         }
-        return sum / objects.length;
+        return sum /objects.length;
     }
-
+*/
 }
 
 
